@@ -1,0 +1,27 @@
+/* Ensure the root container also fills the screen */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";    
+ /* li{
+  color :#5f6fff;
+}
+button{
+  background-color: #5f6fff; 
+} */
+*{
+  font-family: outfit;
+}
+@theme {
+  --color-primary: #5f6FFF;
+}
+
+.active hr{
+  @apply block
+}
+
+::-webkit-scrollbar{
+  @apply hidden
+}
+
+/* gridTemplateColumns{
+  'auto': 'repeat(auto-fit, minmax(250px, 1fr))',
+} */
