@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../Components/Header'
-import TopDoctors from '../Components/topDoctors'
+import TopDoctors from '../Components/TopDoctors'
 import SpecialityMenu from '../Components/SpecialityMenu'
 import Banner from '../Components/Banner'
 
