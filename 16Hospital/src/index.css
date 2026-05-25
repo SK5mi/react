@@ -22,6 +22,12 @@ button{
   @apply hidden
 }
 
+@media(max-width:740px){
+  .active p{
+    @apply text-white bg-primary
+  }
+}
+
 /* gridTemplateColumns{
   'auto': 'repeat(auto-fit, minmax(250px, 1fr))',
 } */
