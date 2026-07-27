@@ -1,4 +1,4 @@
-import jwt from 'Jsonwebtoken'
+import jwt from 'jsonwebtoken'
 
 //admin authentication webtocken
 
