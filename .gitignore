@@ -13,3 +13,5 @@
 /13React
 /14UseContext
 /15HookForm
+node_modules/
+.env

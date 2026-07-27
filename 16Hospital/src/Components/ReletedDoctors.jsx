@@ -5,16 +5,16 @@ import { useNavigate } from 'react-router-dom'
 
 
 
-const ReletedDoctors = ({speciality,docId}) => {
+const ReletedDoctors = ({Speciality,docId}) => {
 const {doctors} = useContext(AppContext)
 const navigate = useNavigate()
 const [relDoc, setrelDoc] = useState([])
 useEffect(() =>{
-if(doctors.length > 0 && speciality){
-    const doctorsData = doctors.filter((doc) => doc.speciality === speciality && doc._id !== docId)
+if(doctors.length > 0 && Speciality){
+    const doctorsData = doctors.filter((doc) => doc.Speciality === Speciality && doc._id !== docId)
 setrelDoc(doctorsData)
 }
-},[doctors,speciality,docId])
+},[doctors,Speciality,docId])
   return (
     <div className='flex flex-col items-center gap-4 my-16 text-gray-900 md:mx-10'>
        <h1 className='text-3xl font-medium'>Top Doctors to Book</h1>
@@ -30,8 +30,8 @@ setrelDoc(doctorsData)
                      <p className='w-2 h-2 bg-green-500 rounded-full'></p><p>Available</p>
                </div>
                      <p className='text-gray-900 text-lg font-medium'>{item.name}</p>
-                     <p className='text-gray-600 text-sm'>{item.speciality}</p>
-                     <p className='text-gray-500 text-xs'>{item.experience} experience</p>
+                     <p className='text-gray-600 text-sm'>{item.Speciality}</p>
+                     <p className='text-gray-500 text-xs'>{item.experiance} experience</p>
                 </div>
 
             </div>
