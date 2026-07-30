@@ -13,13 +13,13 @@ const RoleLogin = () => {
   const [state, setState] = useState('Login') // Login | Sign Up
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [Password, setPassword] = useState('')
 
   const onSubmit = async (e) => {
     e.preventDefault()
     try {
       const endpoint = state === 'Sign Up' ? '/api/user/register' : '/api/user/login'
-      const payload = state === 'Sign Up' ? { name, email, password } : { email, password }
+      const payload = state === 'Sign Up' ? { name, email, Password } : { email, Password }
       const { data } = await axios.post(backendUrl + endpoint, payload)
 
       if (data.success) {
@@ -82,7 +82,7 @@ const RoleLogin = () => {
 
           <label className="text-xs text-gray-500 mb-1 block">Password</label>
           <input
-            type="password" value={password} onChange={(e) => setPassword(e.target.value)}
+            type="Password" value={Password} onChange={(e) => setPassword(e.target.value)}
             placeholder="Enter password" required
             className="border rounded-md w-full px-3 py-2 mb-6"
           />
