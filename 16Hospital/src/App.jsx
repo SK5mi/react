@@ -13,6 +13,7 @@ import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
  import { ToastContainer, toast } from 'react-toastify';
  import 'react-toastify/dist/ReactToastify.css';
+import RoleLogin from './Components/ProtectedRoute'
 
 
 
@@ -30,7 +31,8 @@ const App = () => {
             <Route path='/appointments/:docId' element={<Appointment />} />
             <Route path='/doctors' element={<Doctors/>} /> 
             <Route path='/doctors/:Spacility' element={<Doctors />} />
-            <Route path='/Login' element ={<Login/>} />
+            {/* <Route path='/Login' element ={<Login/>} /> */}
+            <Route path='/login' element={<RoleLogin />} />
         </Routes>
 <Footer/>
 
