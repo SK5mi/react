@@ -10,11 +10,12 @@ const NavBar = () => {
 const navigate= useNavigate()
 
     const logout =() =>{
-        navigate('/')
+       
        dToken && setDToken('')
         aToken && setaToken('')
         aToken && localStorage.removeItem('aToken')
         dToken && localStorage.removeItem('dToken')
+        window.location.href = 'https://react-black-alpha.vercel.app/login'
         
     }
   return (
