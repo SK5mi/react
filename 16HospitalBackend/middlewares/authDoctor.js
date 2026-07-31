@@ -13,7 +13,8 @@ const authDoctor = async (req, res, next) => {
         const token_decode = jwt.verify(dtoken, process.env.jwt_SECRET)
 
        // console.log("Checking the Docter ID :", req.body.docId)
-        req.docId = token_decode.id
+        // req.docId = token_decode.id
+        req.docId = token_decode.docId
         next()
     } catch (error) {
         console.log(error)
