@@ -71,6 +71,7 @@ const DoctorContextProvider = (props) => {
     const getDashData = async () => {
         try {
             const { data } = await axios.get(backendURL + '/api/doctor/dashboard', { headers: { dToken } })
+            console.log(data)
             if (data.success) {
                 setDashData(data.dashData)
                 // console.log(data.dashData)
